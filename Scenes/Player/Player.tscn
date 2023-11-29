@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bslwtm8sjw14s"]
+[gd_scene load_steps=37 format=3 uid="uid://bslwtm8sjw14s"]
 
 [ext_resource type="Texture2D" uid="uid://bqny0o5gsk3lh" path="res://Assets/Player.png" id="1_1dykl"]
 
@@ -13,14 +13,6 @@ region = Rect2(22, 72, 22, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ukblc"]
 atlas = ExtResource("1_1dykl")
 region = Rect2(44, 72, 22, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w4xus"]
-atlas = ExtResource("1_1dykl")
-region = Rect2(66, 72, 22, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lt6l6"]
-atlas = ExtResource("1_1dykl")
-region = Rect2(66, 72, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5yn7f"]
 atlas = ExtResource("1_1dykl")
@@ -153,18 +145,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ukblc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w4xus")
 }],
 "loop": false,
 "name": &"crashBack",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lt6l6")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_5yn7f")
 }, {
@@ -282,8 +268,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bfbvf")
 }],
-"loop": true,
-"name": &"stuned",
+"loop": false,
+"name": &"stunned",
 "speed": 5.0
 }, {
 "frames": [{

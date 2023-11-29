@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvuano0s8oq6t"
-path="res://.godot/imported/Racer1.png-22d16bb26311a5d829903fd0530c3a01.ctex"
+uid="uid://d2qwbwxhkpwqt"
+path="res://.godot/imported/Level_3.png-8c5a10e852950d89fa287f5a926c4b7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Racer1.png"
-dest_files=["res://.godot/imported/Racer1.png-22d16bb26311a5d829903fd0530c3a01.ctex"]
+source_file="res://Assets/Levels/Level_3.png"
+dest_files=["res://.godot/imported/Level_3.png-8c5a10e852950d89fa287f5a926c4b7b.ctex"]
 
 [params]
 

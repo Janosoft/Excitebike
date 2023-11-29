@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd1ql11dqe16k"]
+
+[ext_resource type="Texture2D" uid="uid://dvuano0s8oq6t" path="res://Assets/Racer_1.png" id="1_8cf6g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rjy0i"]
+size = Vector2(22, 12)
+
+[node name="Racer_1Bike" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8cf6g")
+hframes = 6
+vframes = 6
+frame = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_rjy0i")
