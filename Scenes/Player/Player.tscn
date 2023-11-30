@@ -1,7 +1,11 @@
-[gd_scene load_steps=38 format=3 uid="uid://bslwtm8sjw14s"]
+[gd_scene load_steps=40 format=3 uid="uid://bslwtm8sjw14s"]
 
 [ext_resource type="Texture2D" uid="uid://bqny0o5gsk3lh" path="res://Assets/Player.png" id="1_1dykl"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_knfkn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni0f0"]
+atlas = ExtResource("1_1dykl")
+region = Rect2(22, 24, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_va0gj"]
 atlas = ExtResource("1_1dykl")
@@ -26,6 +30,10 @@ region = Rect2(22, 72, 22, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_kn4pa"]
 atlas = ExtResource("1_1dykl")
 region = Rect2(0, 72, 22, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpsra"]
+atlas = ExtResource("1_1dykl")
+region = Rect2(22, 48, 22, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lb8ke"]
 atlas = ExtResource("1_1dykl")
@@ -139,6 +147,14 @@ region = Rect2(66, 120, 22, 24)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_ni0f0")
+}],
+"loop": false,
+"name": &"climb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_va0gj")
 }, {
 "duration": 1.0,
@@ -163,6 +179,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"crashFoward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpsra")
+}],
+"loop": false,
+"name": &"descend",
 "speed": 5.0
 }, {
 "frames": [{
@@ -302,7 +326,7 @@ size = Vector2(20, 21)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 4
-collision_mask = 2
+collision_mask = 0
 script = ExtResource("1_knfkn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -318,3 +342,13 @@ shape = SubResource("RectangleShape2D_gk4d0")
 limit_left = 0
 limit_top = 0
 limit_bottom = 240
+
+[node name="FrontRayCast2D" type="RayCast2D" parent="."]
+position = Vector2(9, 0)
+target_position = Vector2(0, 22)
+collision_mask = 2
+
+[node name="RearRayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-12, 0)
+target_position = Vector2(0, 22)
+collision_mask = 2
