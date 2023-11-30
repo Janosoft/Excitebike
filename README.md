@@ -12,7 +12,7 @@ Este proyecto es una emocionante recreación del legendario juego Excitebike de 
 
 ## Cómo Empezar
 1. **Requisitos Previos:**
-   - Godot Engine 4.1.3 instalado.
+   - Godot Engine 4.2 instalado.
    - Clona este repositorio: `git clone git@github.com:Janosoft/Excitebike.git`
 
 2. **Ejecutar el Juego:**
