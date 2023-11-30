@@ -11,9 +11,11 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _animate():
-	if lean>0: 
+	if lean>0:
+		#Solo anima hasta el final
 		if not (animatedSprite.animation=="leanFoward" and animatedSprite.animation_finished): animatedSprite.play("leanFoward")
 	elif lean<0:
+		#Solo anima hasta el final
 		if not (animatedSprite.animation=="leanBack" and animatedSprite.animation_finished): animatedSprite.play("leanBack")
 	else:
 		if velocity.x < 0.2: animatedSprite.play("idle")

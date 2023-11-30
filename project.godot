@@ -52,6 +52,13 @@ accelerate={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Terreno"
+2d_physics/layer_2="Obstáculos"
+2d_physics/layer_3="Jugador"
+2d_physics/layer_4="Racers"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
