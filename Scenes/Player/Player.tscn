@@ -322,7 +322,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gk4d0"]
-size = Vector2(14, 21)
+size = Vector2(12, 20)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 4
@@ -335,7 +335,7 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 1.5)
+position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gk4d0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -345,10 +345,10 @@ limit_bottom = 240
 
 [node name="FrontRayCast2D" type="RayCast2D" parent="."]
 position = Vector2(8, 0)
-target_position = Vector2(0, 22)
+target_position = Vector2(0, 17)
 collision_mask = 2
 
 [node name="RearRayCast2D" type="RayCast2D" parent="."]
 position = Vector2(-6, 0)
-target_position = Vector2(0, 22)
+target_position = Vector2(0, 18)
 collision_mask = 2

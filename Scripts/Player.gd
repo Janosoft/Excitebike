@@ -16,8 +16,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 func _apply_gravity():
-	if position.y > currentY: position.y = currentY
-	else: position.y = lerp(position.y,float(currentY),0.1)
+	if !climb and !descent:
+		if position.y > currentY: position.y = currentY
+		else: position.y = lerp(position.y,float(currentY),0.1)
 
 func _animate():
 	if climb: animatedSprite.play("climb")
