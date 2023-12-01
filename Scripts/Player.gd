@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 100
+const MAXSPEED = 150
 var lean = 0
 var climb = 0
 var descent = 0
@@ -36,9 +37,10 @@ func _animate():
 	
 func _control(delta):
 	if Input.is_action_pressed("accelerate"):
-		velocity.x += SPEED*delta
+		#velocity.x += SPEED*delta
+		velocity.x =  min(velocity.x + SPEED * delta, MAXSPEED)
 	else:
-		velocity.x= lerp(velocity.x,0.0,0.2)
+		velocity.x= lerp(velocity.x,0.0,0.1)
 	lean = Input.get_axis("leanBack", "leanFoward")
 
 func _controlobstacles():
