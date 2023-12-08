@@ -5,7 +5,9 @@ const MAXSPEED = 150
 var lean = 0
 var climb = 0
 var descent = 0
-var currentY = 208
+var currentY = 173 #PISTA ARRIBA
+#var currentY = 208 #PISTA ABAJO
+
 
 @onready var animatedSprite = $AnimatedSprite2D
 
@@ -19,7 +21,7 @@ func _physics_process(delta):
 func _apply_gravity():
 	if !climb and !descent:
 		if position.y > currentY: position.y = currentY
-		else: position.y = lerp(position.y,float(currentY),0.1)
+	else: position.y = lerp(position.y,float(currentY),0.1)
 
 func _animate():
 	if climb: animatedSprite.play("climb")
@@ -37,7 +39,6 @@ func _animate():
 	
 func _control(delta):
 	if Input.is_action_pressed("accelerate"):
-		#velocity.x += SPEED*delta
 		velocity.x =  min(velocity.x + SPEED * delta, MAXSPEED)
 	else:
 		velocity.x= lerp(velocity.x,0.0,0.1)
@@ -47,9 +48,7 @@ func _controlobstacles():
 	if $FrontRayCast2D.is_colliding() and !$RearRayCast2D.is_colliding():
 		climb= 1
 	elif !$FrontRayCast2D.is_colliding() and $RearRayCast2D.is_colliding():
-		pass
 		descent = 1
 	else:
-		pass
 		climb= 0
 		descent= 0
